@@ -1,0 +1,433 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: white;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* PIERWSZA SEKCJA */
+.page-hero {
+  height: 100vh;
+  background: url(../img/Fotolia_62848010_Subscription_Monthly_M.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: contain;
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+}
+
+/* Górna belka z logo i nawigacją */
+.page-top-bar {
+  background: rgba(0, 0, 0, 0.05);
+  height: 85px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  transition: 0.5s all;
+}
+
+.page-top-bar .container {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+}
+
+.page-top-bar.scrolled { /* dzięki temu po scrollowaniu nav zachowuje się i wygląda trochę inaczej */
+  background: #fff;
+  height: 75px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+}
+
+.page-logo {
+  margin: 0;
+  height: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+.page-logo img {
+  display: block;
+}
+
+.page-nav ul {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: end;
+          justify-content: flex-end;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+.page-nav li {
+  height: 100%;
+}
+
+.page-nav a {
+  border-right: 1px solid rgba(255, 255, 255, 0.17);
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 0 20px;
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  transition: 0.5s color, 0.5s background;
+  display: -webkit-box;
+  display: flex;
+  height: 100%;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+.page-nav a:hover {
+  background: lightgreen;
+  color: #fff;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* Napis na facecie */
+
+.main-banner {
+  -webkit-box-flex: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.main-banner-slide {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center;
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+.main-banner-slider-title {
+  font-size: 80px;
+  color: lightgreen;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin: 0;
+  position: relative;
+  top: -50px;
+  opacity: 1;
+  transition: 1s all;
+  text-shadow: 1px 1px 1px black;
+}
+
+/* zakomentowałem, bo na razie nie jest mi potrzebne
+.main-banner-content {
+  color: rgba(0, 0, 0, 0.8);
+  max-width: 900px;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+  top: -30px;
+  opacity: 1;
+  transition: 1s 0.5s all;
+}
+*/
+
+.btn {
+  display: inline-block;
+  padding: 20px 40px;
+  box-shadow: inset 0 0 0 40px #5bb260;
+  border: 0;
+  color: #dee5df;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  background: #4efc59;
+  border-radius: 4px;
+  transition: 0.5s color, 0.5s box-shadow;
+}
+
+.btn:hover {
+  box-shadow: inset 0 0 0 3px #5bb260;
+  color: white;
+}
+
+/* sekcja ze szczegółami oferty */
+
+.main-features-list {
+  padding: 100px 0;
+  background-color: #97a097;
+}
+
+.title {
+  margin: 0 0 60px;
+  font-size: 60px;
+  text-transform: uppercase;
+  font-weight: 800;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.title span {
+  color: #fff;
+}
+
+.title:after {
+  width: 200px;
+  height: 2px;
+  background: #000;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: '';
+}
+
+.row {
+  display: -webkit-box;
+  display: flex;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.row .col {
+  -webkit-box-flex: 1;
+          flex-grow: 1;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.block-graphic {
+  position: relative;
+  display: block;
+}
+
+.block-graphic img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.block-graphic span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s opacity;
+}
+
+.block-graphic span:before, /*te dwa spany to jest plusik na grafice, jeden ze spanów jest w poziomie a drugi w pionie*/
+.block-graphic span:after {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 8px;
+  height: 40px;
+  border-radius: 2px;
+  background: #fff;
+  content: '';
+  -webkit-transform: translate(-50%, -50%); /* to ustawia element na środku */
+          transform: translate(-50%, -50%);
+}
+
+.block-graphic span:after {
+  -webkit-transform: translate(-50%, -50%) rotate(-90deg);
+          transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+.block-graphic:hover span {
+  opacity: 1;
+  visibility: visible;
+}
+
+.block-title {
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.block-content {
+  margin-bottom: 30px;
+}
+
+/* koniec sekcji ze szczegółami oferty */
+
+/* sekcja z opisem pracowników */
+
+.main-employee-list {
+  background: #006300;
+  padding: 100px 0;
+}
+
+.main-employee-list .col {
+  padding: 0 30px;
+  text-align: center;
+}
+
+.main-employee-list .block-graphic {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* sekcja z mapą */
+.main-map {
+  height: 850px;
+  background: #78C0A8;
+  padding: 100px 0;
+}
+
+
+.main-map-cnt {
+  height: 550px;
+}
+
+/* sekcja z formularzem */
+
+.main-contact {
+  padding: 100px 0;
+  background-color: #97a097;
+}
+
+.main-form-row {
+  margin-bottom: 20px;
+}
+
+.main-form input[type=text],
+.main-form input[type=email],
+.main-form textarea {
+  min-width: 500px;
+  font-family: "Nunito Sans", sans-serif;
+  padding: 18px;
+  font-size: 16px;
+  border: 1px solid #000;
+  background: transparent;
+}
+
+.main-form textarea {
+  resize: none;
+  width: 100%;
+  height: 180px;
+}
+
+.main-form input[type=text]::-webkit-input-placeholder,
+.main-form input[type=email]::-webkit-input-placeholder,
+.main-form textarea::-webkit-input-placeholder {
+  color: #000;
+}
+
+.main-form input[type=text]::-moz-placeholder,
+.main-form input[type=email]::-moz-placeholder,
+.main-form textarea::-moz-placeholder {
+  color: #000;
+}
+
+.main-form input[type=text]:-ms-input-placeholder,
+.main-form input[type=email]:-ms-input-placeholder,
+.main-form textarea:-ms-input-placeholder {
+  color: #000;
+}
+
+.main-form input[type=text]:-moz-placeholder,
+.main-form input[type=email]:-moz-placeholder,
+.main-form textarea:-moz-placeholder {
+  color: #000;
+}
+
+.main-form input[type=text]:focus,
+.main-form input[type=email]:focus,
+.main-form textarea:focus {
+  box-shadow: inset 0 0 0 1px #000;
+  outline: none;
+}
+
+.main-form input[type=text].error,
+.main-form input[type=email].error,
+.main-form textarea.error {
+  border-color: red;
+}
+
+.main-form input[type=text].error:focus,
+.main-form input[type=email].error:focus,
+.main-form textarea.error:focus {
+  box-shadow: inset 0 0 0 1px red;
+  outline: none;
+}
+
+.main-form-message {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+  padding-left: 50px;
+  line-height: 60px;
+  margin-left: 30px;
+}
+
+.main-form-message:before {
+  content: '\f118';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  font-size: 40px;
+  font-family: "FontAwesome";
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  line-height: 1;
+}
+
+.message-send-error:before {
+  content: '\f00d';
+}
+
+.visuallyhidden, .main-form label {
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+  /* 1 */
+}

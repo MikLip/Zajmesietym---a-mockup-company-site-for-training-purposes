@@ -1,0 +1,7 @@
+1. Rozkminic formularze: http://domanart.pl/formularz-kontaktowy/
+
+2. Linkowanie wewnatrz (anchor)
+
+3. Pozmieniac zdjecia i copy na normalne
+
+4. Slider
